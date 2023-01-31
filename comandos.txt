@@ -1,0 +1,2 @@
+ui_main_1.ui -o ui_main_1.py
+pyside2-uic login_1.ui -o ui_login.py
