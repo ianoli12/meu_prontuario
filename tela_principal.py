@@ -459,10 +459,14 @@ class Ui_Form(object):
 
         self.retranslateUi(Form)
 
-        self.Pages.setCurrentIndex(3)
+        self.Pages.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(Form)
+
+
+
+        
     # setupUi
 
     def retranslateUi(self, Form):

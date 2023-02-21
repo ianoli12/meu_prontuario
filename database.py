@@ -35,13 +35,13 @@ class DataBase():
         except:
             print("Faça conexão com o banco")
 
-    def inserir_usuario(self,codigo,nome,telefone,endereco,email,convenio,usuario,senha,acesso):
+    def inserir_usuario(self,nome,telefone,endereco,email,convenio,usuario,senha,acesso):
         cursor = self.connection.cursor()
         cursor.execute("""
-            INSERT INTO USUARIOS(COD_USU,NOME,TELEFONE,ENDERECO,EMAIL,CONVENIO,USUARIO,SENHA,ACESSO) VALUES (?,?,?,?,?,?,?,?,?)
+            INSERT INTO USUARIOS(NOME,TELEFONE,ENDERECO,EMAIL,CONVENIO,USUARIO,SENHA,ACESSO) VALUES (?,?,?,?,?,?,?,?)
 
         """,
-        (codigo,nome,telefone,endereco,email,convenio,usuario,senha,acesso))
+        (nome,telefone,endereco,email,convenio,usuario,senha,acesso))
         self.connection.commit()
 
     def checar_usuario(self,usuario,senha):
