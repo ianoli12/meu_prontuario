@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>897</width>
+    <width>923</width>
     <height>755</height>
    </rect>
   </property>
@@ -707,16 +707,6 @@
           </item>
           <item>
            <widget class="QLineEdit" name="txt_usu_senha"/>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_8">
-            <property name="text">
-             <string>Confirmar Senha:</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="txt_usu_senha_2"/>
           </item>
           <item>
            <widget class="QLabel" name="label_17">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Login</class>
- <widget class="QWidget" name="Login">
+ <class>Loginapp</class>
+ <widget class="QWidget" name="Loginapp">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -38,7 +38,7 @@ border-radius: 10px;</string>
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QLineEdit" name="txt_usuario">
+   <widget class="QLineEdit" name="txt_usuario_login">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -96,7 +96,7 @@ QPushButton:hover{
      <string>Login</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="txt_password">
+   <widget class="QLineEdit" name="txt_senha_login">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -165,8 +165,8 @@ font: 15pt &quot;MS Shell Dlg 2&quot;;</string>
   </widget>
  </widget>
  <tabstops>
-  <tabstop>txt_usuario</tabstop>
-  <tabstop>txt_password</tabstop>
+  <tabstop>txt_usuario_login</tabstop>
+  <tabstop>txt_senha_login</tabstop>
   <tabstop>btn_login</tabstop>
  </tabstops>
  <resources/>

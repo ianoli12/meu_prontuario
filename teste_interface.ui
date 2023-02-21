@@ -6,26 +6,826 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>562</width>
-    <height>491</height>
+    <width>901</width>
+    <height>759</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QFrame" name="frame">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>220</y>
-     <width>75</width>
+     <x>10</x>
+     <y>54</y>
+     <width>879</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QPushButton" name="btn_painel">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift Light SemiCondensed</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(191, 166, 255);</string>
+      </property>
+      <property name="text">
+       <string>PAINEL</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_agenda">
+      <property name="font">
+       <font>
+        <family>Bahnschrift Light SemiCondensed</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(191, 166, 255);</string>
+      </property>
+      <property name="text">
+       <string>AGENDA</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_prontuarios">
+      <property name="font">
+       <font>
+        <family>Bahnschrift Light SemiCondensed</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(191, 166, 255);</string>
+      </property>
+      <property name="text">
+       <string>PRONTUÁRIOS</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_sobre">
+      <property name="font">
+       <font>
+        <family>Bahnschrift Light SemiCondensed</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(191, 166, 255);</string>
+      </property>
+      <property name="text">
+       <string>SOBRE</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+   <zorder>btn_sobre</zorder>
+   <zorder>btn_prontuarios</zorder>
+   <zorder>btn_agenda</zorder>
+   <zorder>btn_painel</zorder>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>14</y>
+     <width>879</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Light SemiCondensed</family>
+     <pointsize>21</pointsize>
+     <weight>75</weight>
+     <italic>false</italic>
+     <bold>true</bold>
+     <strikeout>false</strikeout>
+     <kerning>false</kerning>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(191, 166, 255);</string>
+   </property>
+   <property name="text">
+    <string>Meu Prontuário</string>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_pg_cadastro">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>728</y>
+     <width>879</width>
      <height>23</height>
     </rect>
    </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>CADASTRAR USUARIO</string>
    </property>
   </widget>
+  <widget class="QStackedWidget" name="Pages">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>120</y>
+     <width>879</width>
+     <height>602</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>3</number>
+   </property>
+   <widget class="QWidget" name="pg_painel">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_14">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift Light SemiCondensed</family>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <underline>false</underline>
+         <strikeout>false</strikeout>
+         <stylestrategy>PreferDefault</stylestrategy>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(191, 166, 255);</string>
+       </property>
+       <property name="text">
+        <string>PAINEL</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="font">
+           <font>
+            <family>Bahnschrift Light SemiCondensed</family>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Total de Pacientes:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_7">
+          <property name="font">
+           <font>
+            <family>Bahnschrift Light SemiCondensed</family>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Pacientes Confirmados:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="font">
+           <font>
+            <family>Bahnschrift Light SemiCondensed</family>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Pacientes Atendidos:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_3">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="lb_pac_total">
+          <property name="font">
+           <font>
+            <family>Bahnschrift Light SemiCondensed</family>
+            <pointsize>31</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lb_pac_confirmados">
+          <property name="font">
+           <font>
+            <family>Bahnschrift Light SemiCondensed</family>
+            <pointsize>31</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lb_pac_atendidos">
+          <property name="font">
+           <font>
+            <family>Bahnschrift Light SemiCondensed</family>
+            <pointsize>31</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="pg_agenda"/>
+   <widget class="QWidget" name="pg_prontuarios">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_5">
+     <item>
+      <widget class="QLabel" name="label_20">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift Light SemiCondensed</family>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <underline>false</underline>
+         <strikeout>false</strikeout>
+         <stylestrategy>PreferDefault</stylestrategy>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(191, 166, 255);</string>
+       </property>
+       <property name="text">
+        <string>PRONTUÁRIOS</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_8">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <item>
+         <widget class="QLabel" name="label_19">
+          <property name="font">
+           <font>
+            <family>Bahnschrift Light SemiCondensed</family>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Relação de Prontuários</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_9">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_9">
+        <item>
+         <widget class="QTreeWidget" name="treeWidget">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <column>
+           <property name="text">
+            <string>CÓDIGO</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>NOME</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>TELEFONE</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>CONVÊNIO</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_10">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(191, 166, 255);</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <widget class="QPushButton" name="pushButton_3">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>PushButton</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Adicionar Paciente</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_2">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>Excluir</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="pg_cad_usu">
+    <layout class="QVBoxLayout" name="verticalLayout_13">
+     <item>
+      <widget class="QLabel" name="label_25">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift Light SemiCondensed</family>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+         <underline>false</underline>
+         <strikeout>false</strikeout>
+         <stylestrategy>PreferDefault</stylestrategy>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(191, 166, 255);</string>
+       </property>
+       <property name="text">
+        <string>CADASTRO</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_18">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_16">
+        <item>
+         <widget class="QLabel" name="label_26">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Bahnschrift Light SemiCondensed</family>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Cadastro de Usuários:</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_20">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_14">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Código:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="txt_usu_codigo"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_30">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Nome:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="txt_usu_nome"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_28">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Telefone:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="txt_usu_tel"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_29">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Endereço:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="txt_usu_endereco"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>E-mail:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="txt_usu_email"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_27">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Convênio:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="txt_usu_convenio"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_18">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Usuário:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="txt_usu_usuario"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Senha:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="txt_usu_senha"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>Confirmar Senha:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="txt_usu_senha_2"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_17">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Acesso</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="cb_acesso">
+          <item>
+           <property name="text">
+            <string>USUARIO</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ADMINISTRADOR</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_cadastrar_usu">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Cadastrar</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_4">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>901</width>
+     <height>761</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 0, 255);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <zorder>frame_4</zorder>
+  <zorder>frame</zorder>
+  <zorder>label</zorder>
+  <zorder>btn_pg_cadastro</zorder>
+  <zorder>Pages</zorder>
  </widget>
  <resources/>
  <connections/>

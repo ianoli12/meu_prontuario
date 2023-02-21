@@ -1,9 +1,11 @@
 import sqlite3
+from ui_login import Ui_Loginapp
 
 class DataBase():
     # Se eu não passar argumento nenhum, nosso banco vai ser criado como system.db
     def __init__(self,nome = "system.db") -> None:
         self.nome = nome
+        
     
     # Conecta ao bd
     def conecta(self):
@@ -28,39 +30,44 @@ class DataBase():
                     CONVENIO VARCHAR(30),
                     USUARIO VARCHAR(20) NOT NULL,
                     SENHA VARCHAR(20) NOT NULL,
+                    SENHA2 VARCHAR(20) NOT NULL,
                     ACESSO VARCHAR(20) NOT NULL
                 );
 
             """)
-        except:
+        except AttributeError:
             print("Faça conexão com o banco")
 
-    def inserir_usuario(self,nome,telefone,endereco,email,convenio,usuario,senha,acesso):
+    def inserir_usuario(self,nome,telefone,endereco,email,convenio,usuario,senha,senha2,acesso):
         cursor = self.connection.cursor()
         cursor.execute("""
-            INSERT INTO USUARIOS(NOME,TELEFONE,ENDERECO,EMAIL,CONVENIO,USUARIO,SENHA,ACESSO) VALUES (?,?,?,?,?,?,?,?)
+            INSERT INTO USUARIOS(NOME,TELEFONE,ENDERECO,EMAIL,CONVENIO,USUARIO,SENHA,SENHA2,ACESSO) VALUES (?,?,?,?,?,?,?,?)
 
         """,
-        (nome,telefone,endereco,email,convenio,usuario,senha,acesso))
+        (nome,telefone,endereco,email,convenio,usuario,senha,senha2,acesso))
         self.connection.commit()
 
-    def checar_usuario(self,usuario,senha):
-        try:
-            cursor = self.connection.cursor()
-            cursor.execute("""
-                SELECT * FROM USUARIOS;
-            """)
+    def checar_usuario(self,result):
+        
+        con = sqlite3.connect("system.db")
+        cur = con.cursor()
+        
+        #try:
+            #cursor = self.connection.cursor()
+            #cursor.execute("""
+                #SELECT * FROM USUARIOS;
+            #""")
 
-            for linha in cursor.fetchall():
-                if linha[6].upper() == usuario.upper() and linha [8] == senha and linha[9] == "ADMINISTRADOR":
-                    return "ADMINISTRADOR"
-                elif linha[6].upper() == usuario.upper() and linha[8] == senha and linha[9] == "USUARIO":
-                    return "usuario"
-                else:
-                    continue
-            return "usuario"
-        except:
-            pass
+            #for linha in cursor.fetchall():
+                #if linha[6].upper() == usuario.upper() and linha [7] == senha and linha[8] == "ADMINISTRADOR":
+                    #return "ADMINISTRADOR"
+                #elif linha[6].upper() == usuario.upper() and linha[7] == senha and linha[8] == "USUARIO":
+                    #return "USUARIO"
+                #else:
+                    #continue
+            #return "usuario"
+        #except:
+            #pass
 
 if __name__ == "__main__":
     db = DataBase()
