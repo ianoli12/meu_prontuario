@@ -172,17 +172,17 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>3</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="pg_painel">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
       <widget class="QLabel" name="label_14">
        <property name="enabled">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -343,6 +343,9 @@
         </item>
         <item>
          <widget class="QLabel" name="lb_pac_atendidos">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
           <property name="font">
            <font>
             <family>Bahnschrift Light SemiCondensed</family>
@@ -365,13 +368,13 @@
    <widget class="QWidget" name="pg_agenda"/>
    <widget class="QWidget" name="pg_prontuarios">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_5">
      <item>
       <widget class="QLabel" name="label_20">
        <property name="enabled">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -410,6 +413,9 @@
      </item>
      <item>
       <widget class="QFrame" name="frame_8">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -425,6 +431,9 @@
        <layout class="QHBoxLayout" name="horizontalLayout_8">
         <item>
          <widget class="QLabel" name="label_19">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
           <property name="font">
            <font>
             <family>Bahnschrift Light SemiCondensed</family>
@@ -446,6 +455,9 @@
      </item>
      <item>
       <widget class="QFrame" name="frame_9">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
        </property>
@@ -456,7 +468,7 @@
         <item>
          <widget class="QTreeWidget" name="treeWidget">
           <property name="enabled">
-           <bool>false</bool>
+           <bool>true</bool>
           </property>
           <column>
            <property name="text">
@@ -483,7 +495,7 @@
         <item>
          <widget class="QFrame" name="frame_10">
           <property name="enabled">
-           <bool>false</bool>
+           <bool>true</bool>
           </property>
           <property name="sizePolicy">
            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
@@ -504,15 +516,21 @@
            <item>
             <widget class="QPushButton" name="pushButton_3">
              <property name="enabled">
-              <bool>false</bool>
+              <bool>true</bool>
              </property>
              <property name="text">
               <string>PushButton</string>
+             </property>
+             <property name="checkable">
+              <bool>false</bool>
              </property>
             </widget>
            </item>
            <item>
             <widget class="QPushButton" name="pushButton">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="sizePolicy">
               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                <horstretch>0</horstretch>
@@ -526,6 +544,9 @@
            </item>
            <item>
             <widget class="QPushButton" name="pushButton_2">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="styleSheet">
               <string notr="true"/>
              </property>
@@ -536,6 +557,9 @@
            </item>
            <item>
             <spacer name="verticalSpacer">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="orientation">
               <enum>Qt::Vertical</enum>
              </property>
@@ -803,6 +827,9 @@
    </widget>
   </widget>
   <widget class="QFrame" name="frame_4">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>0</x>

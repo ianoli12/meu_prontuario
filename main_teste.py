@@ -16,18 +16,17 @@ class Home(QMainWindow,Ui_tela_principal): # Herda os atributos de QWidget e Ui_
         self.setupUi(self)
         self.setWindowTitle("Sistema de Gerenciamento")
 
-        """# Define o usuário logado na janela principal
-        self.lb_pac_total.setText("Usuário: " + usuario)"""
-
         ################### PAGINAS DO SISTEMA ###################
         self.btn_painel.clicked.connect(lambda:self.Pages.setCurrentWidget(self.pg_painel))
         self.btn_agenda.clicked.connect(lambda:self.Pages.setCurrentWidget(self.pg_agenda))
         self.btn_prontuarios.clicked.connect(lambda:self.Pages.setCurrentWidget(self.pg_prontuarios))
 
-        #self.btn_cadastrar_usu.clicked.connect(self.cadastrar_usuario)
-        
-        #usuario = self.txt_usuario_login.text()
-
+    def exibir_prontuarios(self,codigo_pront,nome,telefone,convenio):
+        con = sqlite3.connect("system.db")
+        cur = con.cursor()
+        result = cur.execute("SELECT * FROM PRONTUARIOS", (codigo_pront,nome,telefone,convenio)).fetchone()
+        print()
+    
     
 class LoginWindow(QtWidgets.QDialog):
     def __init__(self, parent=None):
@@ -38,7 +37,12 @@ class LoginWindow(QtWidgets.QDialog):
 
         # Carrega a interface criada no QT Designer
         uic.loadUi("login_1.ui", self)
-        
+
+        """db = DataBase()   
+        self.codigo = DataBase()
+        teste = db.exibir_prontuarios()
+        print(teste)"""
+
         # Conecta o botão de login a uma função
         self.btn_login.clicked.connect(self.checar_usuario)
         
@@ -60,16 +64,16 @@ class LoginWindow(QtWidgets.QDialog):
             QtWidgets.QMessageBox.information(self, "Sucesso", "Você realizou o login com sucesso!")
             usuario = self.abrir_home(usuario)
             print("Deu certo")
+            
         else:
             # Usuário e senha inválidos
             QtWidgets.QMessageBox.warning(self, "Falha", "Usuário ou senha incorretos!")
 
     def abrir_home(self,usuario):
         self.hide()
-        #usuario = self.txt_usuario_login.text()
         self.home = Home(usuario)
         self.home.show()
-        
+
 
 
 if __name__ == '__main__':

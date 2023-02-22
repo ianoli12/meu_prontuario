@@ -38,6 +38,22 @@ class DataBase():
         except AttributeError:
             print("Faça conexão com o banco")
 
+    def criar_tabela_prontuarios(self):
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS PRONTUARIOS(
+                    COD_PRONTUARIO INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+                    NOME VARCHAR(100) NOT NULL,
+                    TELEFONE VARCHAR(15) NOT NULL,
+                    CONVENIO VARCHAR(30)
+                );
+
+            """)
+        except AttributeError:
+            print("Não foi possível criar a tabela PRONTUARIOS")
+    
+
     def inserir_usuario(self,nome,telefone,endereco,email,convenio,usuario,senha,senha2,acesso):
         cursor = self.connection.cursor()
         cursor.execute("""
@@ -69,8 +85,10 @@ class DataBase():
         #except:
             #pass
 
+
 if __name__ == "__main__":
     db = DataBase()
     db.conecta()
     db.criar_tabela_usuarios()
+    db.criar_tabela_prontuarios()
     db.close_connection()
