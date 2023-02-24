@@ -17,8 +17,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QHBoxLayout,
     QHeaderView, QLabel, QLineEdit, QPushButton,
-    QSizePolicy, QSpacerItem, QStackedWidget, QTreeWidget,
-    QTreeWidgetItem, QVBoxLayout, QWidget)
+    QSizePolicy, QSpacerItem, QStackedWidget, QTableWidget,
+    QTableWidgetItem, QVBoxLayout, QWidget)
 
 class Ui_tela_principal(object):
     def setupUi(self, tela_principal):
@@ -244,11 +244,20 @@ class Ui_tela_principal(object):
         self.frame_9.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_9 = QHBoxLayout(self.frame_9)
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
-        self.treeWidget = QTreeWidget(self.frame_9)
-        self.treeWidget.setObjectName(u"treeWidget")
-        self.treeWidget.setEnabled(True)
+        self.tableWidget = QTableWidget(self.frame_9)
+        if (self.tableWidget.columnCount() < 4):
+            self.tableWidget.setColumnCount(4)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.tableWidget.setObjectName(u"tableWidget")
 
-        self.horizontalLayout_9.addWidget(self.treeWidget)
+        self.horizontalLayout_9.addWidget(self.tableWidget)
 
         self.frame_10 = QFrame(self.frame_9)
         self.frame_10.setObjectName(u"frame_10")
@@ -506,11 +515,14 @@ class Ui_tela_principal(object):
         self.lb_pac_atendidos.setText(QCoreApplication.translate("tela_principal", u"TextLabel", None))
         self.label_20.setText(QCoreApplication.translate("tela_principal", u"PRONTU\u00c1RIOS", None))
         self.label_19.setText(QCoreApplication.translate("tela_principal", u"Rela\u00e7\u00e3o de Prontu\u00e1rios", None))
-        ___qtreewidgetitem = self.treeWidget.headerItem()
-        ___qtreewidgetitem.setText(3, QCoreApplication.translate("tela_principal", u"CONV\u00caNIO", None));
-        ___qtreewidgetitem.setText(2, QCoreApplication.translate("tela_principal", u"TELEFONE", None));
-        ___qtreewidgetitem.setText(1, QCoreApplication.translate("tela_principal", u"NOME", None));
-        ___qtreewidgetitem.setText(0, QCoreApplication.translate("tela_principal", u"C\u00d3DIGO", None));
+        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("tela_principal", u"CODIGO", None));
+        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("tela_principal", u"NOME", None));
+        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("tela_principal", u"TELEFONE", None));
+        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("tela_principal", u"CONVENIO", None));
         self.pushButton_3.setText(QCoreApplication.translate("tela_principal", u"PushButton", None))
         self.pushButton.setText(QCoreApplication.translate("tela_principal", u"Adicionar Paciente", None))
         self.pushButton_2.setText(QCoreApplication.translate("tela_principal", u"Excluir", None))
